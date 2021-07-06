@@ -1,11 +1,11 @@
-import random, vlc, os, time, pathlib
+import random, vlc, os
 
-path = 'D:/MP3random'
-sourse = random.choice(os.listdir(path))
-print(sourse)
-abs_sourse= f'{path}/{sourse}'
-print(abs_sourse)
-plyr = vlc.MediaPlayer(abs_sourse)
+path = 'D:/MP3random'  #<<Insert you Directory here
+make_selection = random.choice(os.listdir(path))
+#print(make_selection)
+selection_path= f'{path}/{make_selection}'
+#print(selection_path)
+plyr = vlc.MediaPlayer(selection_path)
 plyr.play()
 while True:
     pass
